@@ -55,4 +55,6 @@ def submit():
 def health():
     return "OK", 200
 
-if __name__ == '__ma
+if __name__ == '__main__':
+    init_db_with_retry()
+    app.run(host='0.0.0.0', port=5000)
